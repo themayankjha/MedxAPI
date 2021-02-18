@@ -7,15 +7,14 @@ def make_data(username):
 
 def databasefetcher(username):
     db = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="baka",
-        database="healthcare"
+        host="remotemysql.com",
+        user="hwW4R6cA0s",
+        passwd="9bVe4xsxvX",
+        db="hwW4R6cA0s"
     )
     cursor = db.cursor()
-    sql = "SELECT * FROM outputtable WHERE username = %s"
+    sql = "SELECT * FROM healthcareai WHERE username = %s"
     usr = (username, )
-
     cursor.execute(sql, usr)
     result = cursor.fetchall()
     return result[0]
