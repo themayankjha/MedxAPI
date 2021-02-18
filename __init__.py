@@ -1,12 +1,13 @@
-from flask import Flask,jsonify, make_response
-from functions import make_critical
+from flask import Flask,jsonify, make_response,request
+from functions import make_data
 
 app = Flask(__name__)
 
-@app.route('/getcritical', methods=['GET', 'POST'])
-def make_critical_data():
-    d = make_critical()
-    return make_response(jsonify(d), 200)
+@app.route('/dataendpoint', methods=['GET', 'POST'])
+def makefulldata():
+    username=request.args.get("username")
+    data = make_data(username)
+    return make_response(jsonify(data), 200)
 
 if __name__ == '__main__':
     app.debug = True

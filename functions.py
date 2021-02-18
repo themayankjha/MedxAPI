@@ -1,6 +1,10 @@
 
-def make_critical():
+def make_data(username):
     params = dict()
-    params['name'] = "Mayank"
-    params['age'] = 20
+    params['username'] = username
+    params['heartfailpercent'] = "DummyData"
+    params['heartfailsevierity'] = "DummyData"
     return params
+
+def databasefetcher(username):
+    pass
