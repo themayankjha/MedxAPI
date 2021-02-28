@@ -42,8 +42,8 @@ def heartandstrokedata():
         heartdisease=request.args.get("heartdisease")
         married=request.args.get("married")
         worktype=request.args.get("worktype")
-        residencetype=request.args.get("workresidencetype")
-        glucoselevel=request.args.get("workresidencetype")
+        residencetype=request.args.get("residencetype")
+        glucoselevel=request.args.get("glucoselevel")
         output=heartandstrokedatabaseentry(username,age,height,weight,gender,bloodpressure,diabetes,smoking,anaemia,lastcheckup,hypertension,heartdisease,married,worktype,residencetype,glucoselevel)
         return output
 
