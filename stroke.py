@@ -30,5 +30,5 @@ def stroke(gender, age, hypertension, heart_disease, married, work, residence, g
     GBCModel = GradientBoostingClassifier(n_estimators=100,max_depth=3,random_state=33) 
     GBCModel.fit(X_train, y_train)
     
-    return GBCModel.predict([[gender, age, hypertension, heart_disease, married, work, residence, glucose, bmi, smoking]])
+    return (GBCModel.predict([[gender, age, hypertension, heart_disease, married, work, residence, glucose, bmi, smoking]])).astype(int)
     

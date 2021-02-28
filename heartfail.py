@@ -19,10 +19,9 @@ def heartfail(age, sex, anaemia, bp, diabetes, smoking, time):
     accuracy = sklearn.metrics.accuracy_score(tar_test, predictions)
     model = ExtraTreesClassifier()
     model.fit(pred_train, tar_train)
-    lst = []
-    lst.append(classifier.predict([[age, anaemia, diabetes, bp, sex, smoking, time]])[0])
-    lst.append(accuracy*100)
-    return lst
+    lst=classifier.predict([[age, anaemia, diabetes, bp, sex, smoking, time]])
+    
+    return lst.astype(int)
 
 
 
