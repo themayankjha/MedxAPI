@@ -53,7 +53,7 @@ def heartandstrokedatabaseentry(username,age,height,weight,gender,bloodpressure,
     strokeprediction=strokepredictionlist[0]
     heartfailprediction=heartfailpredictionlist[0]
     sql2 = "INSERT INTO heartandstrokedetection (username,heartfail,stroke) VALUES (%s,%s,%s)"
-    val2 = (username,heartfailprediction.item(),trokeprediction.item())
+    val2 = (username,heartfailprediction.item(),strokeprediction.item())
     cursor.execute(sql2, val2)
     db.commit()
     params = dict()
