@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 
 def stroke(gender, age, hypertension, heart_disease, married, work, residence, glucose, smoking, weight, height):
-    bmi = weight / height**2
+    bmi = float(weight) / float(height)**2
     
     df = pd.read_csv('static/stroke.csv')
     
