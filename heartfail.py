@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 import os
 
 
-def heart_rf(age, sex, anaemia, bp, diabetes, smoking, time):
+def heartfail(age, sex, anaemia, bp, diabetes, smoking, time):
     os.environ['PATH'] = os.environ['PATH']+';'+os.environ['CONDA_PREFIX']+r"\Library\bin\graphviz"
     data = pd.read_csv('static/heart_failure.csv')
     predictors = data[["age", "anaemia", "diabetes", "high_blood_pressure", "sex", "smoking", "time"]]
