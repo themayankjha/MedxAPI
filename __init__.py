@@ -45,7 +45,7 @@ def heartandstrokedata():
         residencetype=request.args.get("residencetype")
         glucoselevel=request.args.get("glucoselevel")
         output=heartandstrokedatabaseentry(username,age,height,weight,gender,bloodpressure,diabetes,smoking,anaemia,lastcheckup,hypertension,heartdisease,married,worktype,residencetype,glucoselevel)
-        return output
+        return return make_response(jsonify(output), 200)
 
 @app.route('/symptoms', methods=['GET'])
 def symptomsdata():
