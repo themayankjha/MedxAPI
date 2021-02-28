@@ -20,8 +20,7 @@ def heartfail(age, sex, anaemia, bp, diabetes, smoking, time):
     model = ExtraTreesClassifier()
     model.fit(pred_train, tar_train)
     lst=classifier.predict([[age, anaemia, diabetes, bp, sex, smoking, time]])
-    
-    return lst.astype(int)
+    return lst
 
 
 
