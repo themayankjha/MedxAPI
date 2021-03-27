@@ -29,7 +29,6 @@ def disease(back_pain,constipation,abdominal_pain,diarrhoea,mild_fever,yellow_ur
     palpitations,painful_walking,pus_filled_pimples,blackheads,scurring,skin_peeling,
     silver_like_dusting,small_dents_in_nails,inflammatory_nails,blister,red_sore_around_nose,
     yellow_crust_ooze):
-    os.environ['PATH'] = os.environ['PATH']+';'+os.environ['CONDA_PREFIX']+r"\Library\bin\graphviz"
     data = pd.read_csv('static/symptoms.csv')
     predictors = data[['back_pain','constipation','abdominal_pain','diarrhoea','mild_fever','yellow_urine', 'yellowing_of_eyes','acute_liver_failure','fluid_overload','swelling_of_stomach',
     'swelled_lymph_nodes','malaise','blurred_and_distorted_vision','phlegm','throat_irritation',
